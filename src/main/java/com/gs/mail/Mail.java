@@ -2,6 +2,7 @@ package com.gs.mail;
 
 import javax.mail.internet.AddressException;
 import javax.mail.internet.InternetAddress;
+import java.util.List;
 
 /**
  * Created by Administrator on 2017/9/22.
@@ -12,6 +13,10 @@ public class Mail {
     private String subject;
     private String content;
     private String contentType;
+
+    private String bodyContent;
+    private List<String> attachments;
+
     private String to;
     private String cc;
     private String bcc;
@@ -94,5 +99,21 @@ public class Mail {
 
     public void setContentType(String contentType) {
         this.contentType = contentType;
+    }
+
+    public String getBodyContent() {
+        return bodyContent;
+    }
+
+    public void setBodyContent(String bodyContent) {
+        this.bodyContent = bodyContent;
+    }
+
+    public List<String> getAttachments() {
+        return attachments;
+    }
+
+    public void setAttachments(List<String> attachments) {
+        this.attachments = attachments;
     }
 }
